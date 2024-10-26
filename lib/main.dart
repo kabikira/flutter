@@ -41,6 +41,34 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('panda'),
+        backgroundColor: Colors.cyan,
+      ),
+      body: Container(
+        color: Colors.yellow,
+        width: double.infinity,
+        height: double.infinity,
+        child: Row(
+          children: [
+            Text('panda'),
+            Text('koala'),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.red,
+            ),
+            Text('panda'),
+            Text('panda'),
+            Column(
+              children: [
+                Text('unnti'),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
