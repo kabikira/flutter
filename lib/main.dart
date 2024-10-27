@@ -14,31 +14,13 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,28 +28,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('panda'),
         backgroundColor: Colors.cyan,
       ),
-      body: Container(
-        color: Colors.yellow,
-        width: double.infinity,
-        height: double.infinity,
-        child: Row(
-          children: [
-            Text('panda'),
-            Text('koala'),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.red,
-            ),
-            Text('panda'),
-            Text('panda'),
-            Column(
-              children: [
-                Text('unnti'),
-              ],
-            )
-          ],
-        ),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {
+              // ボタンを押した時のコード
+            },
+          child: const Text('ボタン'),
+        )
       ),
     );
   }
